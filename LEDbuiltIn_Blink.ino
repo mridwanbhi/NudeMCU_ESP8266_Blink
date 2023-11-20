@@ -1,37 +1,28 @@
 /*
   Blink
 
-  Turns an LED on for one second, then off for one second, repeatedly.
+  Sebagian besar Arduino memiliki LED bawaan yang dapat Anda kontrol. Pada model UNO, MEGA, dan ZERO, LED ini terhubung ke pin digital 13, 
+  sedangkan pada MKR1000 terhubung ke pin 6. LED_BUILTIN diatur ke pin LED yang benar terlepas dari jenis papan yang digunakan.
+Jika Anda ingin mengetahui ke pin mana LED bawaan terhubung pada model Arduino Anda, periksa Spesifikasi Teknis papan Anda di:
+https://www.arduino.cc/en/Main/Products
 
-  Most Arduinos have an on-board LED you can control. On the UNO, MEGA and ZERO
-  it is attached to digital pin 13, on MKR1000 on pin 6. LED_BUILTIN is set to
-  the correct LED pin independent of which board is used.
-  If you want to know what pin the on-board LED is connected to on your Arduino
-  model, check the Technical Specs of your board at:
-  https://www.arduino.cc/en/Main/Products
+  modified 20/11/2023
+  by Mochamad Ridwan
 
-  modified 8 May 2014
-  by Scott Fitzgerald
-  modified 2 Sep 2016
-  by Arturo Guadalupi
-  modified 8 Sep 2016
-  by Colby Newman
-
-  This example code is in the public domain.
-
+  contoh code ini ada di domain publik :
   https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink
 */
 
-// the setup function runs once when you press reset or power the board
+// fungsi setup dijalankan satu kali ketika tombol reset ditekan atau power dinyalakan
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
-// the loop function runs over and over again forever
+// fungsi loop berjalan terus menerus tampa henti setiap 1 ms (mili second) atau 1/1000 detik.
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
-  delay(1000);                      // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
-  delay(1000);                      // wait for a second
+  digitalWrite(LED_BUILTIN, HIGH);  // menyalakan LED (HIGH adalah level voltase)
+  delay(1000);                      // menunggu selama satu detik (1000/1000)
+  digitalWrite(LED_BUILTIN, LOW);   // mematikan LED dengan merubah voltase LOW
+  delay(1000);                      // menunggu selama satu detik (1000/1000)
 }
